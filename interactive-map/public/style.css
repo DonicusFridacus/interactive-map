@@ -19,17 +19,14 @@ h1 {
   margin-bottom: 10px;
   font-size: 32px;
   color: #2c3d6e;
-  text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 h3 {
   color: #2c3d6e;
-  text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 h4 {
   color: #2c3d6e;
-  text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 /* Input and Button Styling */
@@ -225,6 +222,18 @@ body.dark input[type="text"] {
   background-color: #353b48;
   color: #f5f6fa;
   border: 1px solid #718093;
+}
+
+body.dark h1 {
+  color: #f5f6fa;
+}
+
+body.dark h3 {
+  color: #f5f6fa;
+}
+
+body.dark h4 {
+  color: #f5f6fa;
 }
 
 body.dark #info-panel {
