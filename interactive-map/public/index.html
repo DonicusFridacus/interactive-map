@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Map of The Philippines</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>== Map of The Philippines ==</h1>
+  <input type="text" id="search" placeholder="Search a location in The Philippines..." />
+  <button onclick="searchLocation()">Search</button>
+
+  <div class="theme-toggle">
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+    </label>
+    <span class="mode-label">Dark Mode</span>
+  </div>
+  
+  <div id="info-panel">
+    <div id="map"></div>
+  </div>
+  <div id="panel-info">
+    <h3>Location Info</h3>
+    <div id="location-name">Click on the map or search a place.</div>
+    <div id="weather"></div>
+    <button onclick="saveLocation()">Save Location</button>
+    <button onclick="drawRoute()">Draw Route Between Saved</button>
+
+    <h4>Saved Locations:</h4>
+    <ul id="saved-locations"></ul>
+
+    <h3>Nearby Attractions</h3>
+    <ul id="attractions"></ul>
+  </div>
+
+  <button onclick="logout()" id="logout">Logout</button>
+  <script>
+    async function logout() {
+      await fetch("/api/logout");
+      window.location.href = "login.html";
+    }
+  </script> 
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

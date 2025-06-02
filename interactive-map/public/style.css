@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #2c3d6e;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+h3 {
+  color: #2c3d6e;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+h4 {
+  color: #2c3d6e;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+/* Input and Button Styling */
+input[type="text"] {
+  padding: 10px;
+  width: 280px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  margin: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #40739e;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #00a8ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0097e6;
+}
+
+#logout {
+  position: absolute;
+  margin-left: 1450px;
+}
+
+/* Map Styling */
+#map {
+  height: 75vh;
+  width: 70%;
+  max-width: 750px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-right: 600px
+}
+
+/* Info Panel */
+#info-panel {
+  background-color: white;
+  width: 95%;
+  height: 95%;
+  max-width: 2500px;
+  max-height: 2000px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#info-panel h3, #info-panel h4 {
+  color: #192a56;
+  margin-bottom: 8px;
+}
+
+#location-name, #weather {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Saved Locations List */
+#saved-locations {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+#saved-locations li {
+  padding: 6px;
+  margin: 4px 0;
+  background-color: #dcdde1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#saved-locations li:hover {
+  background-color: #c8d6e5;
+}
+
+/* Attractions */
+#attractions {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+#attractions li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f1f2f6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#attractions img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#panel-info {
+  position: absolute;
+  margin-left: 775px;
+  margin-top: 250px;
+  width: 30%;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4cd137;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.mode-label {
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #4b525c;
+  color: #f5f6fa;
+}
+
+body.dark input[type="text"] {
+  background-color: #353b48;
+  color: #f5f6fa;
+  border: 1px solid #718093;
+}
+
+body.dark #info-panel {
+  background-color: #353b48;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark #saved-locations li {
+  background-color: #718093;
+}
+
+body.dark #saved-locations li:hover {
+  background-color: #636e72;
+}
+
+body.dark #attractions li {
+  background-color: #414b57;
+}
+
+body.dark button {
+  background-color: #487eb0;
+}
+
+body.dark button:hover {
+  background-color: #40739e;
+}
